@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+	<meta charset="UTF-8">
+	<title>FCC Survey Form</title>
+	<link rel="stylesheet" href="css/SurveyForm.css">  
+</head>
+
+<body>
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+<h1 id="title">5e Campaign Preferences</h1>
+
+<p id="description">Stop! Who would play D&D must answer me these questions three.</p>
+
+<form id="survey-form">
+	<fieldset>
+		<legend>Contact Information</legend>
+		
+		<label for="name" id="name-label">Name*</label>
+		<input id="name" type="text" placeholder="Enter your name" required>
+		
+		<label for="email" id="email-label">Email*</label>
+		<input id="email" type="email" placeholder="Enter your email" required>
+		
+		<label for="freetime" id="freetime-label">When are you available to play?*</label>
+		<textarea id="freetime" placeholder="Which days and times are you free?" required></textarea>
+	</fieldset>
+	<h3>Rule Preferences</h3>
+	<p>...and also these other questions, the party will follow the majority result</p>
+	<fieldset>
+		<legend>Character Creation</legend>
+		
+		<label for="dropdown">Ability Scores</label>
+		<select id="dropdown" name="stats">
+			<option value="rand">Roll for Stats</option>
+			<option value="standard">Point-Buy: Standard (27 Points)</option>
+			<option value="heroic">Point-Buy: Heroic (45 Points)</option>
+		</select>
+		
+		<label for="number" id="number-label">Starting Level</label>
+		<input id="number" type="number" min="1" max="20" placeholder="1-20">
+		
+		<label for="evil-bool" id="evil-label">Allow evil party members</label>
+		<input id="evil-bool" type="checkbox" value="villains">
+		
+		<label for="homebrew-material">Homebrew Material</label>
+		<textarea id="homebrew-material" placeholder="will require DM approval. Classes, Races, Feats, etc."></textarea>
+	</fieldset>
+	<fieldset>
+		<legend>Campaign Rules</legend>
+		
+		<label>Tracking Level-ups</label>
+		<ul>
+			<li>
+				<input id="XP" name="progress" type="radio" value="XP">
+				<label for="XP">Experience-based</label>
+			</li>
+			<li>
+				<input id="Story" name="progress" type="radio" value="Story">
+				<label for="Story">Story-based</label>
+			</li>
+		</ul>
+		<label for="weight">Track Encumbrance</label>
+		<input id="weight" type="checkbox" value="packrat">
+		
+		<label for="ammo">Track Ammunition</label>
+		<input id="ammo" type="checkbox" value="quivering">
+
+		<label for="consume">Track Food & Water</label>
+		<input id="consume" type="checkbox" value="survivalist">
+
+		<label for="skill-challenge">Include Party Skill Challenges</label>
+		<input id="skill-challenge" type="checkbox" value="cooperative">
+
+		<label for="pvp">Allow Intra-Party Combat</label>
+		<input id="pvp" type="checkbox" value="lone-wolf">
+
+		<label for="adventures">Adventure Preferences</label>
+		<textarea id="adventures" placeholder="List any adventures you are interested in, or are running in another party."></textarea>
+		
+		</fieldset>
+  <fieldset>
+    <legend>Combat Rules</legend>
+	<label>
+		Type of Grid
+	</label>
+	<ul>
+		<li>
+			<input id="square" name="grid" type="radio" value="square">
+			<label for="square">Squares</label>
+		</li>
+		<li>
+			<input id="hex" name="grid" type="radio" value="hex">
+			<label for="hex">Hexes</label>
+		</li>
+	</ul>
+	
+	<label for="flank">Flanking DMG 251</label>
+	<input id="flank" type="checkbox" value="flanking">
+
+	<label for="mark">Marking DMG 271</label>
+	<input id="mark" type="checkbox" value="marking">
+
+	<label for="personal space">Overrun/Tumble DMG 272</label>
+	<input id="personal space" type="checkbox" value="what's personal space">
+</fieldset>
+	<fieldset id="CQC">
+		<legend>Comments or Questions?</legend>
+		<textarea id="comments"></textarea>
+	</fieldset>
+	<button id="submit" type="submit">Submit</button>
+</form>
+
+</body>
+
+</html>
