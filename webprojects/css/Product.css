@@ -12,7 +12,7 @@ header{
 	background-color:#ddd;
 	font-family:audiowide;
 	width:calc(100vw - 90px);
-	min-width:600px;
+	min-width:470px;
 }
 #header-img{
 	-webkit-transform: scaleX(-1);
@@ -38,7 +38,6 @@ main{
 	box-shadow:20px 10px 0 0 red;
 }
 #gauntlet{
-	min-width:800px;
 	margin:0;
 	text-align:left;
 }
@@ -74,7 +73,6 @@ main{
 	margin:0 50px;
 	display:flex;
 }
-
 .socket{
 	position:relative;
 	height:275px;
@@ -207,6 +205,7 @@ main{
 	transform:rotate(45deg);
 	background-color:white;
 	text-align:initial;
+	z-index:1;
 }
 .burst-box:before{
 	width:var(--burst-radius);
@@ -235,7 +234,6 @@ main{
 	width:var(--burst-border);
 	height:var(--burst-border);
 	position:absolute;
-	z-index:-2;
 	transform:rotate(45deg);
 	background-color:black;
 	text-align:initial;
@@ -244,7 +242,6 @@ main{
 	width:var(--burst-border);
 	height:var(--burst-border);
 	position:absolute;
-	z-index:-2;
 	transform:rotate(60deg);
 	background-color:black;
 	content:"";
@@ -253,7 +250,6 @@ main{
 	width:var(--burst-border);
 	height:var(--burst-border);
 	position:absolute;
-	z-index:-2;
 	transform:rotate(-60deg);
 	background-color:black;
 	content:"";
@@ -303,4 +299,44 @@ main{
 }
 #disclaimer-text{
 	transform:skewX(15deg);
+}
+
+
+
+@media (max-width:1000px){
+	main{
+		min-width:620px;
+		width:100%;
+	}
+	#gauntlet{
+		display:flex;
+		flex-wrap:wrap;
+		max-width:799px;
+	}
+	#socket-row-top{
+		width:100%;
+		display:contents;
+	}
+	#socket-row-bottom{
+		width:100%;
+		display:contents;
+	}
+	.dorsal-aspect{
+		height:325px;
+		width:200px;
+		border-radius:42%;
+		margin:5px auto;
+		display:flex;
+	}
+	.finger{
+		margin:5px auto;
+		display:flex;
+	}
+	.mind{
+		height:275px;
+		width:180px;
+	}
+	#video{
+		position:static
+	}
 }
